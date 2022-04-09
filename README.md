@@ -1,7 +1,7 @@
 # Fun with Wordle
 The file `wordle.py` contains utility functions and code for optimizing the Wordle strategy in a tree structure.
 
-The notebook [wordlePlayer.ipynb](https://colab.research.google.com/github/RyGuy101/wordle/blob/master/wordlePlayer.ipynb) solves an actual Wordle game by asking the user to make certain guesses and report back the hints.
+**Try out [wordlePlayer.ipynb](https://colab.research.google.com/github/RyGuy101/wordle/blob/master/wordlePlayer.ipynb)**, which solves an actual Wordle game by asking the user to make certain guesses and report back the hints.
 
 Uses the word lists found here: https://github.com/3b1b/videos/tree/b1ad11dfb3d38a9f5d3f1c9e4548208be51e1b96/_2022/wordle/data.
 
