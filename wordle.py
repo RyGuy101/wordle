@@ -258,29 +258,29 @@ def verifyWordlePerformance(wordle_tree):
 
 
 if __name__ == "__main__":
-    # PROGRAM 1: Show best starting words measured by 1-step expected information gain
+    # PROGRAM 1: Show best starting words measured by 1-step expected information gain.
     # best1StepStartingWords()
 
 
-    # PROGRAM 2: Create tree of Wordle games using a limited set of "good" guesses at each step
+    # PROGRAM 2: Create tree of Wordle games using a limited set of "good" guesses at each step.
     # wordleTree = HintNode([], encodedAnswers.shape[0], 0)
     # buildWordleTree(allAnswerIndices, wordleTree)
     # with open("wordleTree.pickle", 'wb') as f:
     #     pickle.dump(wordleTree, f)
 
 
-    # PROGRAM 3: Optimize the Wordle tree to minimize the average number of guesses
+    # PROGRAM 3: Optimize the Wordle tree to minimize the average number of guesses.
     # with open("wordleTree.pickle", 'rb') as f:
     #     wordleTree = pickle.load(f)
     # optimizeWordleTree(wordleTree)
-    # print("Expected number of guesses: {}".format(wordleTree.words[0].expected_guesses))
-    # print("Starting word: {}".format(guesses[wordleTree.words[0].guess_index]))
-    # print("Second word if all blanks: {}".format(guesses[wordleTree.words[0].hints[0].words[0].guess_index]))
     # with open("wordleTreeOptimized.pickle", 'wb') as f:
     #     pickle.dump(wordleTree, f)
 
 
-    # PROGRAM 4: Empirically compute the average number of guesses by testing over all possible answer words
+    # PROGRAM 4: Report Wordle tree characteristics, and empirically compute the average number of guesses by testing over all possible answer words.
     with open("wordleTreeOptimized.pickle", 'rb') as f:
         wordleTree = pickle.load(f)
+    print("Expected number of guesses: {}".format(wordleTree.words[0].expected_guesses))
+    print("Starting word: {}".format(guesses[wordleTree.words[0].guess_index]))
+    print("Second word if all blanks: {}".format(guesses[wordleTree.words[0].hints[0].words[0].guess_index]))
     print("Average number of guesses: {}".format(verifyWordlePerformance(wordleTree)))
